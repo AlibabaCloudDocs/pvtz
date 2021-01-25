@@ -3,21 +3,27 @@
 
 
 
+
+
 概述 
 --------------------
 
 解析器（Resolver）通过创建域名转发规则和DNS出站终端节点，可将阿里云vpc下PrivateZone 的dns请求流量转发到外部DNS系统，能够有效解决混合云、云上\&云下的业务间调用场景。
 
-
-
 [试用说明](https://help.aliyun.com/document_detail/179151.html)
 
+开放地域 
+-------------------------
 
+目前解析器功能开放Region：北京、深圳、上海、杭州、张家口、香港。
 
 操作流程 
 ----------------------
 
-![](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/8335477951/p136500.png)
+![p136500](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2302651161/p231913.png) 
+---------------------------------------------------------------------------------------------------------------------------
+
+
 
 出站终端节点 
 ---------------------------
@@ -36,16 +42,15 @@
 
 
 
-![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p140023.png)
+![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231896.png)
 
 3. 出站终端节点创建配置。
 
+   ![创建出站终端节点](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231914.png)
    
 
 
 
-
-![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p142423.png)
 
 * 终端节点名称
 
@@ -85,13 +90,12 @@
 目前仅支持选择非托管安全组。[何为托管安全组？](https://help.aliyun.com/document_detail/188745.html?spm=a2c4g.11174283.6.898.709e52feYDfEo2)
 
 * 出站流量源IP地址
+  可用区域下子网中可用的IP地址（非ECS已占用IP地址）。为了保证高可用，解析器要求至少添加两个出站源IP地址，而且建议这2个IP地址分在不同的可用区，解析器允许添加的出站源IP地址最多为6个。
 
   
 
 
 
-
-可用区域下子网中可用的IP地址（非ECS已占用IP地址）。为了保证高可用，解析器要求至少添加两个出站源IP地址，而且建议这2个IP地址分在不同的可用区，解析器允许添加的出站源IP地址最多为6个。
 
 4. 点击 **确认 ，** 如果角色不存在 PrivateZone会创建一个服务关联角色。
 
@@ -102,23 +106,23 @@
 
 **注：每次创建出站终端节点时，都会进行提示，但只有当角色不存在时才会创建。** 
 
-![image.png](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p136503.png "image.png")
+![角色创建](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2724651161/p231917.png)
 
 5. 出站终端节点列表会展示刚创建的节点及已经创建完成的节点。其中出站终端节点的状态包括："正常"、"创建中"、"创建失败"、"修改中"、"修改失败"、"异常"。
 
+   **注意**
+
+   
+
+   **（1）创建终端节点，约需等待5-10分钟，如状态在"创建中"时，请耐心等待即可。** 
+
+   **（2）"创建中"的节点不允许修改和删除。如状态提示"异常"、"修改失败"，请** **[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex?spm=5176.2020520129.0.0.104746aeExF3rR)** **排查与处理。**
    
 
 
 
-**注意**
 
-
-
-**（1）创建终端节点，约需等待5-10分钟，如状态在"创建中"时，请耐心等待即可。** 
-
-**（2）"创建中"的节点不允许修改和删除。如状态提示"异常"、"修改失败"，请** **[提交工单](https://selfservice.console.aliyun.com/ticket/createIndex?spm=5176.2020520129.0.0.104746aeExF3rR)** **排查与处理。**
-
-![2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p142449.png)
+![异常截图](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/2724651161/p231919.png)
 
 
 
@@ -136,7 +140,7 @@
 
 
 
-![3](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p142458.png)
+![3](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231897.png)
 
 3. 修改完，点击确认后，列表中的终端节点状态会变更为"修改中"，且无法进行修改及删除。
 
@@ -145,7 +149,7 @@
 
 
 
-![4](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p142459.png)
+![4](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231898.png)
 
 
 
@@ -161,17 +165,13 @@
 
 
 
-*
-  **注意**
+* ![6](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231899.png)
 
-  如当前出站终端节点已被关联转发规则，请先删除对应的转发规则，再操作删除出站终端节点。查看\<[转发规则（转发规则删除）](#section-vlt-llc-kb5)\>。
-
-  ![6](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p140172.png)
   
 
-* ![8](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p140181.png)
+* ![8](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231900.png)
 
-* ![11](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/9335477951/p142462.png)
+* ![11](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231901.png)
 
 * 根据业务需要及业务含义进行规则命名。
 
@@ -185,28 +185,28 @@
 
 * 4. 配置完毕点击确认后，在转发规则列表中会生成一条转发规则。
 
-* ![9](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p140185.png)
+* ![9](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231902.png)
 
-* ![22](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142464.png)
+* ![22](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231903.png)
 
-* ![33](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142466.png)
+* ![33](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231904.png)
 
-* ![333](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142470.png)
+* ![333](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231905.png)
 
-* ![55](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p140197.png)
+* ![55](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231906.png)
 
 * 创建完 **转发规则** 后，需要进行 **VPC关联** ，转发规则才能对VPC内生效。
 
-* ![1111](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142477.png)![2212](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142502.png)![1231](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142608.png)
+* ![1111](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/3302651161/p231907.png)![2212](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4302651161/p231908.png)![1231](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/4302651161/p231909.png)
 
 * 若要进行取消VPC关联，请参考以下步骤：
 
 * 1.单击已经关联VPC的转发规则后方的"关联VPC"操作按钮。
 
-* ![32111](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142610.png)
+* ![1](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5635651161/p231975.png)
 
 * 2.在关联VPC配置页面，删除已经关联的VPC，并单击确认。
 
-* ![666](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/0435477951/p142612.png)
+* ![2](https://static-aliyun-doc.oss-accelerate.aliyuncs.com/assets/img/zh-CN/5635651161/p231977.png)
 
 
