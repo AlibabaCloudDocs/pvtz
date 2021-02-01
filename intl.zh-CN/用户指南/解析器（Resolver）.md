@@ -10,6 +10,8 @@
 
 解析器（Resolver）通过创建域名转发规则和DNS出站终端节点，可将阿里云vpc下PrivateZone 的dns请求流量转发到外部DNS系统，能够有效解决混合云、云上\&云下的业务间调用场景。
 
+[试用说明](https://www.alibabacloud.com/help/zh/doc-detail/179151.htm?spm=a2c63.p38356.b99.3.6f5d277937j1Qe)
+
 
 
 开放地域 
@@ -75,7 +77,7 @@
 
 **（1）出站终端节点一旦创建，不允许修改"出站VPC"，** **避免误操作造成线上流量中断。** 
 
-**（2）目前新品试用期间仅开放北京** **区域节点，并同步正在收集其他Region的开放优先级。如需申请其他Region，请** **说明申请的Region。**
+**（2）目前新品试用期间仅开放北京** **区域节点，并同步正在收集其他Region的开放优先级。如需申请其他Region，请** [提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.12818093.top-nav.dticket.6cb216d0lhCUgm#/ticket/list) **说明申请的Region。**
 
 * 选择安全组
 
@@ -116,7 +118,7 @@
 
    **（1）创建终端节点，约需等待5-10分钟，如状态在"创建中"时，请耐心等待即可。** 
 
-   **（2）"创建中"的节点不允许修改和删除。如状态提示"异常"、"修改失败"，请** **排查与处理。**
+   **（2）"创建中"的节点不允许修改和删除。如状态提示"异常"、"修改失败"，请** [提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.12818093.top-nav.dticket.6cb216d0lhCUgm#/ticket/list) **排查与处理。**
    
 
 
