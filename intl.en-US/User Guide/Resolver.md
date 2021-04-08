@@ -17,7 +17,7 @@ The Resolver feature of Alibaba Cloud DNS PrivateZone allows you to create domai
 Supported regions 
 --------------------------------------
 
-The Resolver feature is available in the following regions: China (Beijing), China (Shenzhen), China (Shanghai), China East 2 Finance, China (Hangzhou), China (Zhangjiakou), and China (Hong Kong).
+The Resolver feature is available in the following regions: China (Beijing), China (Shenzhen), China (Shanghai), , China (Hangzhou), China (Zhangjiakou), China（Huhehaote）、 China (Hong Kong)、USA（Virginia），a total of 8 public cloud Regions；2 Financial Cloud Regions in Shanghai and Shenzhen.
 
 Procedure 
 ---------------------------
