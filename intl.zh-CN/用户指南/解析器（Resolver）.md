@@ -74,7 +74,7 @@
 
 **（1）出站终端节点一旦创建，不允许修改"出站VPC"，** **避免误操作造成线上流量中断。** 
 
-**（2）目前新品试用期间仅开放北京** **区域节点，并同步正在收集其他Region的开放优先级。如需申请其他Region，请** [提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.12818093.top-nav.dticket.6cb216d0lhCUgm#/ticket/list) **说明申请的Region。**
+**（2）目前** **开放区域请参考上述"开放地域"，并同步正在收集其他Region的开放优先级。如需申请其他Region，请** [提交工单](https://workorder-intl.console.aliyun.com/?spm=5176.12818093.top-nav.dticket.6cb216d0lhCUgm#/ticket/list) **说明申请的Region。**
 
 * 选择安全组
 
