@@ -10,8 +10,6 @@
 
 解析器（Resolver）通过创建域名转发规则和DNS出站终端节点，可将阿里云vpc下PrivateZone 的dns请求流量转发到外部DNS系统，能够有效解决混合云、云上\&云下的业务间调用场景。
 
-[试用说明](https://www.alibabacloud.com/help/zh/doc-detail/179151.htm?spm=a2c63.p38356.b99.3.6f5d277937j1Qe)
-
 
 
 开放地域 
