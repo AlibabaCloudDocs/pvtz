@@ -10,10 +10,6 @@ Overview
 
 The Resolver feature of Alibaba Cloud DNS PrivateZone allows you to create domain name-based forwarding rules and Domain Name System (DNS) outbound endpoints. For DNS requests that are sent within private zones associated with virtual private clouds (VPCs), you can use the created rules and endpoints to forward the requests to a third-party DNS or a on-premises DNS. This ensures that services deployed in a data center, an Alibaba Cloud VPC, and a hybrid cloud environment can access each other by using domain names.
 
-[Trial instructions](https://www.alibabacloud.com/help/zh/doc-detail/179151.htm?spm=a2c63.p38356.b99.3.6f5d277937j1Qe)
-
-
-
 Supported regions 
 --------------------------------------
 
