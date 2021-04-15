@@ -71,7 +71,7 @@ The VPC where the outbound endpoint resides. The Resolver forwards all the outbo
 
 **(1) You cannot change the specified VPC after an outbound endpoint is created. This avoids the interruption of forwarding DNS requests caused by misoperations.** 
 
-**(2) The Resolver feature is in trial mode and you can deploy outbound endpoints in VPCs only in the China (Beijing)** **region. The Alibaba Cloud DNS team will provide more available regions in the future based on their priorities. If you need to deploy outbound endpoints in other regions,** [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.12818093.top-nav.dticket.6cb216d0lhCUgm#/ticket/list) **with a description of the required region.**
+**(2)** **Please refer to "Supported Regions" above for the current open Regions.The Alibaba Cloud DNS team will provide more available regions in the future based on their priorities. If you need to deploy outbound endpoints in other regions,** [submit a ticket](https://workorder-intl.console.aliyun.com/?spm=5176.12818093.top-nav.dticket.6cb216d0lhCUgm#/ticket/list) **with a description of the required region.**
 
 * Security Group
 
