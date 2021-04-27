@@ -3,8 +3,6 @@
 
 在添加一个Zone以后，您需要先为其设置相应PrivateZone解析记录，然后才能将这个Zone关联到VPC。Zone关联VPC以后，在VPC环境内，Zone的PrivateZone记录会覆盖其公网解析记录。
 
-在添加一个Zone以后，您需要先为其设置相应PrivateZone解析记录，然后才能将这个Zone关联到VPC。Zone关联VPC以后，在VPC环境内，Zone的PrivateZone记录会覆盖其公网解析记录。
-
 **操作步骤** 
 
 参照以下步骤来为Zone添加PrivateZone解析记录：
